@@ -2,6 +2,9 @@
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
+#include <Windows.h>
+
+#include <GL/gl.h>
 int main() {
     // 初始化GLFW
     if (!glfwInit()) {
