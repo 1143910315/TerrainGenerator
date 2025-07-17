@@ -1,9 +1,11 @@
 add_rules("mode.debug", "mode.release")
 if is_mode("debug") then
     set_runtimes("MDd")
+    add_requires("glew")
     add_requires("imgui", {debug = true, configs = {glfw = true, opengl3 = true}})
 else
     set_runtimes("MD")
+    add_requires("glew")
     add_requires("imgui", {configs = {glfw = true, opengl3 = true}})
 end
 target("TerrainGenerator")
@@ -12,7 +14,7 @@ target("TerrainGenerator")
         "cl::/utf-8"
     )
     set_warnings("allextra")
-    add_packages("imgui")
+    add_packages("glew", "imgui")
     if is_mode("debug") then
         add_defines("_DEBUG")
         set_symbols("debug", "edit")

@@ -1,10 +1,8 @@
+#include <GL/glew.h>
 #include <GLFW/glfw3.h> // 确保已安装GLFW
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
-#include <Windows.h>
-
-#include <GL/gl.h>
 int main() {
     // 初始化GLFW
     if (!glfwInit()) {
